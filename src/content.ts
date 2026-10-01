@@ -30,17 +30,35 @@ export type LinkItem = {
 export type MediaItem = YouTubeItem | LinkItem;
 
 export const VIDEOS: MediaItem[] = [
-  { kind: "youtube", id: "2jP2O-uQj5U" },
-  { kind: "youtube", id: "DA9unW5A0pk" },
+  {
+    kind: "youtube",
+    id: "2jP2O-uQj5U",
+    title: "We Still Can't Explain This Image.",
+    source: "Scribbled Saint",
+  },
+  {
+    kind: "youtube",
+    id: "DA9unW5A0pk",
+    title: "Indisputable Evidence the Shroud of Turin is Real",
+    source: "Truthly",
+  },
   {
     kind: "link",
     url: "https://ondemand.ewtn.com/Home/Play/en/381-388309",
+    title: "The Shroud of Turin",
     source: "EWTN",
     cta: "Watch on EWTN",
   },
 ];
 
-export const PODCAST: MediaItem[] = [{ kind: "youtube", id: "HAbuG-oVq1Q" }];
+export const PODCAST: MediaItem[] = [
+  {
+    kind: "youtube",
+    id: "HAbuG-oVq1Q",
+    title: "New Evidence for the Shroud of Turin (Fr. Andrew Dalton) | Ep. 383",
+    source: "Matt Fradd",
+  },
+];
 
 export type Article = { title: string; source: string; url: string; note: string };
 
