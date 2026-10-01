@@ -164,19 +164,42 @@ export const DEBATED = [
 
 // ---------- Stations of the Cross ----------
 // Put images in public/images/stations/ named 01.jpg ... 14.jpg.
+// Each Station has its own page at /stations/1 ... /stations/14.
+// Meditations and prayers: St. Alphonsus Liguori, "The Way of the Cross"
+// (public-domain English translation).
 
 export type Station = {
   n: number;
   title: string;
   scripture?: string;
   meditation: string;
+  prayer: string;
   shroud?: string;
 };
 
+export const STATIONS_SOURCE =
+  "Meditations and prayers by St. Alphonsus Liguori, from his Way of the Cross (traditional public-domain English translation).";
+
 export const STATIONS_OPENING = {
-  versicle: "We adore you, O Christ, and we bless you.",
-  response: "Because by your holy Cross you have redeemed the world.",
+  versicle: "We adore Thee, O Christ, and we bless Thee.",
+  response: "Because by Thy holy Cross, Thou hast redeemed the world.",
 };
+
+export const STATIONS_PREPARATORY_PRAYER =
+  "My Lord Jesus Christ, Thou hast made this journey to die for me with love unutterable, and I have so many times unworthily abandoned Thee; but now I love Thee with my whole heart, and because I love Thee, I repent sincerely for ever having offended Thee. Pardon me, my God, and permit me to accompany Thee on this journey. Thou goest to die for love of me; I wish also, my beloved Redeemer, to die for love of Thee. My Jesus, I will live and die always united to Thee.";
+
+// Said after each Station, following the Our Father, Hail Mary, and Glory Be.
+export const STATIONS_VERSE = [
+  "Dear Jesus, Thou dost go to die",
+  "For very love of me:",
+  "Ah! let me bear Thee company;",
+  "I wish to die with Thee.",
+];
+
+export const STATIONS_CLOSING = [
+  "After this, say the Our Father, the Hail Mary, and the Glory be to the Father five times, in honour of the Passion of Jesus Christ. Lastly, say one Our Father, Hail Mary, and Glory be to the Father for the intention of the Sovereign Pontiff.",
+  "St. Alphonsus Liguori, pray for us! Amen.",
+];
 
 export const STATIONS: Station[] = [
   {
@@ -184,14 +207,18 @@ export const STATIONS: Station[] = [
     title: "Jesus is condemned to death",
     scripture: "Mark 15:15",
     meditation:
-      "Pilate wants to keep the crowd calm, so he gives in. The innocent one stands silent while others decide his fate. When have I gone along with the crowd to avoid trouble?",
+      "Consider how Jesus, after having been scourged and crowned with thorns, was unjustly condemned by Pilate to die on the Cross.",
+    prayer:
+      "My adorable Jesus, it was not Pilate, no, it was my sins that condemned Thee to die. I beseech Thee, by the merits of this sorrowful journey, to assist my soul in her journey towards eternity. I love Thee, my beloved Jesus; I repent with my whole heart for having offended Thee. Never permit me to separate myself from Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.",
   },
   {
     n: 2,
     title: "Jesus takes up his cross",
     scripture: "John 19:17",
     meditation:
-      "Jesus does not run from the cross. He embraces it. Ask him for the strength to carry the burdens that are yours today, trusting that you do not carry them alone.",
+      "Consider how Jesus, in making this journey with the Cross on His shoulders thought of us, and for us offered to His Father the death He was about to undergo.",
+    prayer:
+      "My most beloved Jesus, I embrace all the tribulations Thou hast destined for me until death. I beseech Thee, by the merits of the pain Thou didst suffer in carrying Thy Cross, to give me the necessary help to carry mine with perfect patience and resignation. I love Thee, Jesus my love; I repent of having offended Thee. Never permit me to separate myself from Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.",
     shroud:
       "Some researchers read the abrasions on the shoulders of the Shroud's image as consistent with carrying a heavy beam.",
   },
@@ -199,26 +226,34 @@ export const STATIONS: Station[] = [
     n: 3,
     title: "Jesus falls the first time",
     meditation:
-      "The weight is too much, and he falls. God did not simply look down on our weakness. He entered it. When I fall, I can rise again, because he did too.",
+      "Consider this first fall of Jesus under His Cross. His flesh was torn by the scourges, His head crowned with thorns, and He had lost a great quantity of blood. He was so weakened that he could scarcely walk, and yet he had to carry this great load upon His shoulders. The soldiers struck Him rudely, and thus He fell several times in His journey.",
+    prayer:
+      "My Jesus, it is not the weight of the Cross, but of my sins, which have made Thee suffer so much pain. Ah! by the merits of this first fall, deliver me from the misfortune of falling into mortal sin. I love Thee, O my Jesus, with my whole heart; I repent of having offended Thee. Never permit me to separate myself from Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.",
   },
   {
     n: 4,
     title: "Jesus meets his mother",
     meditation:
-      "Mary says nothing, but her presence says everything. A mother who stays beside her suffering son. Think of those who have stayed beside you in hard times, and of those who need you now.",
+      "Consider the meeting of the Son and the Mother, which took place on this journey. Jesus and Mary looked at each other, and their looks became as so many arrows to wound those hearts which loved each other so tenderly.",
+    prayer:
+      "My most loving Jesus, by the sorrow Thou didst experience in this meeting, grant me the grace of a truly devoted love for Thy most holy Mother. And thou, my Queen, who wast overwhelmed with sorrow, obtain for me by thy intercession a continual and tender remembrance of the Passion of thy Son. I love Thee, Jesus my love; I repent of ever having offended Thee. Never permit me to offend Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.",
   },
   {
     n: 5,
     title: "Simon of Cyrene helps Jesus carry the cross",
     scripture: "Mark 15:21",
     meditation:
-      "Simon was only passing by, and he was forced into service. Yet he walks alongside Jesus. Sometimes helping a stranger is exactly how we meet Christ.",
+      "Consider how the Jews, seeing that at each step Jesus from weakness was on the point of expiring, and fearing that He would die on the way, when they wished Him to die the ignominious death of the Cross, constrained Simon the Cyrenian to carry the Cross behind our Lord.",
+    prayer:
+      "My most beloved Jesus, I will not refuse the Cross, as the Cyrenian did; I accept it; I embrace it. I accept in particular the death Thou hast destined for me; with all the pains that may accompany it; I unite it to Thy death, I offer it to Thee. Thou hast died for love of me; I will die for love of Thee, and to please Thee. Help me by Thy grace. I love Thee, Jesus my love; I repent of having offended Thee. Never permit me to offend Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.",
   },
   {
     n: 6,
     title: "Veronica wipes the face of Jesus",
     meditation:
-      "According to a pious tradition, a woman steps out of the crowd to wipe the face of Jesus. A small act of tenderness, in a place where it was not safe. What small kindness can I do today?",
+      "Consider how the holy woman named Veronica, seeing Jesus so afflicted, and His face bathed in sweat and blood, presented Him with a towel, with which He wiped His adorable face, leaving on it the impression of His holy countenance.",
+    prayer:
+      "My most beloved Jesus, Thy face was beautiful before, but in this journey it has lost all its beauty, and wounds and blood have disfigured it. Alas! my soul also was once beautiful, when it received Thy grace in Baptism; but I have disfigured it since by my sins; Thou alone, my Redeemer, canst restore it to its former beauty. Do this by Thy Passion, O Jesus. I repent of having offended Thee. Never permit me to offend Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.",
     shroud:
       "The image of the Holy Face has long inspired Christian art. The face on the Shroud has shaped how many people picture Jesus.",
   },
@@ -226,34 +261,44 @@ export const STATIONS: Station[] = [
     n: 7,
     title: "Jesus falls the second time",
     meditation:
-      "Again he falls, and again he gets up. This is perseverance. Where am I tempted to give up? Ask him for the courage to begin again.",
+      "Consider the second fall of Jesus under the Cross — a fall which renews the pain of all the wounds of the head and members of our afflicted Lord.",
+    prayer:
+      "My most gentle Jesus, how many times Thou hast pardoned me, and how many times have I fallen again, and begun again to offend Thee! Oh, by the merits of this new fall, give me the necessary help to persevere in Thy grace until death. Grant that in all temptations which assail me I may always commend myself to Thee. I love Thee, Jesus my love; I repent of having offended Thee. Never permit me to offend Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.",
   },
   {
     n: 8,
     title: "Jesus meets the women of Jerusalem",
     scripture: "Luke 23:27–28",
     meditation:
-      "The women weep, and Jesus turns to them with compassion. He sees them, even in his own pain. Pray for those who suffer in our world and are often overlooked.",
+      "Consider how those women wept with compassion at seeing Jesus in such a pitiable state, streaming with blood, as He walked along. But Jesus said to them: Weep not for Me, but for your children.",
+    prayer:
+      "My Jesus, laden with sorrows, I weep for the offences I have committed against Thee, because of the pains they have deserved, and still more because of the displeasure they have caused Thee, who hast loved me so much. It is Thy love, more than the fear of hell, which causes me to weep for my sins. My Jesus, I love Thee more than myself; I repent of having offended Thee. Never permit me to offend Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.",
   },
   {
     n: 9,
     title: "Jesus falls the third time",
     meditation:
-      "He is nearly at the top, and exhausted. Our own weariness is not a sign that God has left us. Offer him the tiredness you carry, and let him meet you in it.",
+      "Consider the third fall of Jesus Christ. His weakness was extreme, and the cruelty of His executioners was excessive, who tried to hasten His steps when He had scarcely strength to move.",
+    prayer:
+      "Ah, my outraged Jesus, by the merits of the weakness Thou didst suffer in going to Calvary, give me strength sufficient to conquer all human respect, and all my wicked passions, which have led me to despise Thy friendship. I love Thee, Jesus my love, with my whole heart; I repent of having offended Thee. Never permit me to offend Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.",
   },
   {
     n: 10,
     title: "Jesus is stripped of his garments",
     scripture: "John 19:23–24",
     meditation:
-      "Everything is taken from him, even his dignity. Yet he remains who he is. Our worth does not come from what we own or how we are treated.",
+      "Consider the violence with which the executioners stripped Jesus. His inner garments adhered to His torn flesh, and they dragged them off so roughly that the skin came with them. Compassionate your Savior thus cruelly treated, and say to Him:",
+    prayer:
+      "My innocent Jesus, by the merits of the torment Thou hast felt, help me to strip myself of all affection to things of earth, in order that I may place all my love in Thee, who art so worthy of my love. I love Thee, O Jesus, with my whole heart; I repent of having offended Thee. Never permit me to offend Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.",
   },
   {
     n: 11,
     title: "Jesus is nailed to the cross",
     scripture: "Luke 23:33",
     meditation:
-      "His hands, which healed and blessed, are fastened to the wood. He gives himself completely. Ask for the grace to offer your hands, your time, and your gifts for others.",
+      "Consider how Jesus, after being thrown on the Cross extended His hands, and offered to His Eternal Father the sacrifice of His death for our salvation. These barbarians fastened Him with nails, and then, raising the Cross, allowed Him to die with anguish on this infamous gibbet.",
+    prayer:
+      "My Jesus! loaded with contempt, nail my heart to Thy feet, that it may ever remain there, to love Thee, and never quit Thee again. I love Thee more than myself; I repent of having offended Thee. Never permit me to offend Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.",
     shroud:
       "On the Shroud, blood stains appear at the wrists and feet.",
   },
@@ -262,7 +307,9 @@ export const STATIONS: Station[] = [
     title: "Jesus dies on the cross",
     scripture: "Luke 23:46",
     meditation:
-      "“Father, into your hands I commend my spirit.” He dies as he lived, trusting the Father. Stay a moment in silence before the cross.",
+      "Consider how thy Jesus, after three hours’ Agony on the Cross, consumed at length with anguish, abandons Himself to the weight of His body, bows His head, and dies.",
+    prayer:
+      "O my dying Jesus, I kiss devoutly the Cross on which Thou didst die for love of me. I have merited by my sins to die a miserable death; but Thy death is my hope. Ah, by the merits of Thy death, give me grace to die, embracing Thy feet, and burning with love for Thee. I commit my soul into Thy hands. I love Thee with my whole heart; I repent of ever having offended Thee. Never permit me to offend Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.",
     shroud:
       "The large stain on the right side of the image recalls the lance wound described in John 19:34.",
   },
@@ -271,14 +318,18 @@ export const STATIONS: Station[] = [
     title: "Jesus is taken down from the cross",
     scripture: "John 19:38",
     meditation:
-      "His body is placed in the arms of his mother. She holds her son once more. We too are invited to receive Jesus with reverence.",
+      "Consider how, after the death of our Lord, two of His disciples, Joseph and Nicodemus, took Him down from the Cross, and placed Him in the arms of His afflicted Mother, who received Him with unutterable tenderness, and pressed Him to her bosom.",
+    prayer:
+      "O Mother of sorrow, for the love of this Son, accept me for thy servant, and pray to Him for me. And Thou, my Redeemer, since Thou hast died for me, permit me to love Thee; for I wish but Thee, and nothing more. I love Thee, my Jesus, and I repent of ever having offended Thee. Never permit me to offend Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.",
   },
   {
     n: 14,
     title: "Jesus is laid in the tomb",
     scripture: "John 19:41–42",
     meditation:
-      "They wrap his body in linen cloths and lay him in a new tomb. It seems like the end, but the Church waits in hope for the third day.",
+      "Consider how the disciples carried the body of Jesus to bury it, accompanied by His holy Mother, who arranged it in the sepulchre with her own hands. They then closed the tomb, and all withdrew.",
+    prayer:
+      "Oh, my buried Jesus, I kiss the stone that encloses Thee. But Thou didst rise again the third day. I beseech Thee, by Thy resurrection, make me rise glorious with Thee at the last day, to be always united with Thee in heaven, to praise Thee and love Thee forever. I love Thee, and I repent of ever having offended Thee. Never permit me to offend Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.",
     shroud:
       "The Gospels mention linen burial cloths. The Shroud of Turin is a linen cloth that many Christians honor as a reminder of this moment.",
   },

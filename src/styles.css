@@ -614,6 +614,160 @@ img.hero-img.is-negative {
   color: var(--muted);
 }
 
+/* ---------- Multi-page additions ---------- */
+
+.nav a[aria-current="page"] {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.page-header {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: calc(1.6rem + env(safe-area-inset-top, 0px)) 1.25rem 1.2rem;
+}
+
+.page-header .museum {
+  margin-bottom: 0.6rem;
+}
+
+.page-site {
+  display: inline-block;
+  font-size: 1.15rem;
+  color: var(--linen);
+  text-decoration: none;
+  margin-bottom: 0.3rem;
+}
+
+.page-header h1 {
+  font-size: clamp(2.1rem, 8vw, 3.4rem);
+  letter-spacing: -0.01em;
+  margin-top: 0.4rem;
+}
+
+.home-cards {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 760px) {
+  .home-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.home-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.2rem 1.25rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--linen);
+  text-decoration: none;
+}
+
+.home-card:active,
+.home-card:hover {
+  border-color: var(--gold);
+}
+
+.home-card-title {
+  font-size: 1.5rem;
+}
+
+.home-card-text {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.station h2 {
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.opening h3 {
+  font-family: var(--ui);
+  font-style: normal;
+  font-size: 0.85rem;
+  color: var(--blood);
+  margin-bottom: 0.5rem;
+}
+
+.prayer {
+  font-style: italic;
+}
+
+.after {
+  font-family: var(--ui);
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.verse {
+  display: flex;
+  flex-direction: column;
+  font-style: italic;
+  color: var(--muted);
+}
+
+.begin {
+  margin: 0 0 1.6rem;
+}
+
+.button {
+  display: inline-block;
+  font-family: var(--ui);
+  font-size: 1rem;
+  padding: 0.75rem 1.2rem;
+  background: var(--panel);
+  border: 1px solid var(--gold);
+  border-radius: var(--radius);
+  color: var(--linen);
+  text-decoration: none;
+}
+
+.station-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.station-list a {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+  padding: 0.75rem 1rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--linen);
+  text-decoration: none;
+}
+
+.station-list a:active,
+.station-list a:hover {
+  border-color: var(--gold);
+}
+
+.station-list-n {
+  font-family: var(--ui);
+  font-size: 0.85rem;
+  color: var(--blood);
+  min-width: 1.5rem;
+}
+
+.source-note {
+  font-family: var(--ui);
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 1.4rem;
+}
+
 /* ---------- Footer ---------- */
 
 .footer {
