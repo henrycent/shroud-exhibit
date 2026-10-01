@@ -15,6 +15,11 @@ npm run dev
 
 Missing images show a labeled placeholder, so the site never looks broken.
 
+## Pages
+`/` home, `/close-ups`, `/watch`, `/read`, `/stations`, and `/stations/1` ... `/stations/14`.
+`vercel.json` sends every path to `index.html` so these links work when opened directly.
+Station meditations and prayers are from St. Alphonsus Liguori's *Way of the Cross* (public domain).
+
 ## Shroud images (public/images/shroud/)
 face.jpg, negative.jpg, hands.jpg, side.jpg, back.jpg, weave.jpg, fire.jpg
 
